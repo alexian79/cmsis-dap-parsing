@@ -1,0 +1,282 @@
+jul 18/20:18:26.188 DEBUG2 : 		
+
+StartSession()
+
+jul 18/20:18:26.188 INFO   : Debug Log(info): Loading the CMSIS-DAP driver
+jul 18/20:18:26.188 DEBUG2 : 		-> ConnectToHardware()
+jul 18/20:18:26.188 DEBUG2 : 		-> CreateJetTerminal()
+jul 18/20:18:26.188 DEBUG2 : 		<- CreateJetTerminal()
+jul 18/20:18:26.188 DEBUG2 : 		-> AcquireSigAPIPtr()
+jul 18/20:18:26.188 DEBUG2 : 		  SigAPISetPath('C:\Program Files\IAR Systems\Embedded Workbench 9.40.1\arm\bin\jet\bin')
+jul 18/20:18:26.190 DEBUG2 : 		<- AcquireSigAPIPtr()
+jul 18/20:18:26.190 DEBUG2 : 		-> CreateSigProbe()
+jul 18/20:18:26.191 DEBUG2 : 		  SigProbe version: 1.24
+jul 18/20:18:26.191 DEBUG2 : 		<- CreateSigProbe()
+jul 18/20:18:26.191 DEBUG2 : 		-> SigProbeInit()
+jul 18/20:18:26.200 DEBUG2 : 		<- SigProbeInit()
+jul 18/20:18:26.200 INFO   : Debug Log(info): Probe: CMSIS-DAP probe SW module ver 1.24
+
+jul 18/20:18:26.200 INFO   : Probe: CMSIS-DAP probe SW module ver 1.24
+
+jul 18/20:18:26.200 DEBUG2 : 		-> ConnectToProbe()
+jul 18/20:18:26.200 DEBUG2 : 		  ISigProbe::EnumScan()
+jul 18/20:18:26.206 DEBUG2 : 		  scanning finished: found 1 probes
+jul 18/20:18:26.206 DEBUG2 : 		    connection Serial No: CMSIS-DAP v1:3130708163008E06
+jul 18/20:18:26.214 DEBUG2 : 		    connection found probes: 
+jul 18/20:18:26.216 INFO   : Debug Log(info): Probe: Connecting to CMSIS-DAP v1:3130708163008E06 firmware v.2.1.0
+
+jul 18/20:18:26.216 INFO   : Probe: Connecting to CMSIS-DAP v1:3130708163008E06 firmware v.2.1.0
+
+jul 18/20:18:26.216 DEBUG2 : 		<- ConnectToProbe()
+jul 18/20:18:26.216 DEBUG2 : 		-> CreateSigEmus()
+jul 18/20:18:26.216 DEBUG2 : 		  ISigAPI::CreateInstance('ISigEmu', 'EARM', '')
+jul 18/20:18:26.218 DEBUG2 : 		Core 0: sigEmu->LinkAttach(ISigProbe)
+jul 18/20:18:26.218 DEBUG2 : 		  core 0: IsigEmu::ParamSet('Emulator', 'cmsisdap')
+jul 18/20:18:26.218 DEBUG2 : 		  core 0: IsigEmu::ParamSet('Processor', 'Cortex-M7')
+jul 18/20:18:26.218 DEBUG2 : 		  core 0: IsigEmu::ParamSet('JtagHeader', 'ARM-SWD')
+jul 18/20:18:26.218 DEBUG2 : 		  core 0: IsigEmu::ParamSet('CoreSightSWJ', 'SWD')
+jul 18/20:18:26.218 DEBUG2 : 		  core 0: IsigEmu::ParamSet('JTagSpeed', '25000')
+jul 18/20:18:26.218 DEBUG2 : 		  core 0: IsigEmu::ParamSet('BoardCfg', '-auto')
+jul 18/20:18:26.218 DEBUG2 : 		  core 0: IsigEmu::ParamSet('JtagInitDelay', '200,r:300')
+jul 18/20:18:26.218 DEBUG2 : 		  core 0: IsigEmu::ParamSet('BigEndian', '0')
+jul 18/20:18:26.218 DEBUG2 : 		  ISigEmu::LinkAttach('SigTerminalLog'...)
+jul 18/20:18:26.218 DEBUG2 : 		Core 0: sigEmu->LinkAttach(SigTerminalLog)
+jul 18/20:18:26.218 DEBUG2 : 		<- CreateSigEmus()
+jul 18/20:18:26.218 DEBUG2 : 		-> CreateInterfaceComProtocol()
+jul 18/20:18:26.218 DEBUG2 : 		  ISigProbe::AcquireInterface('ComProtocol')
+jul 18/20:18:26.218 DEBUG2 : 		<- CreateInterfaceComProtocol()
+jul 18/20:18:26.218 DEBUG2 : 		-> CollectCoreNames()
+jul 18/20:18:26.218 DEBUG2 : 		<- CollectCoreNames()
+jul 18/20:18:26.218 DEBUG2 : 		-> DoIceConnect()
+jul 18/20:18:26.218 DEBUG2 : 		  core 0: IsigEmu::ParamSet('BoardDID', '')
+jul 18/20:18:26.218 DEBUG2 : 		Core 0: IceConnect(...)
+jul 18/20:18:26.219 DEBUG2 : 		<- DoIceConnect()
+jul 18/20:18:26.219 DEBUG2 : 		-> DoIceInit()
+jul 18/20:18:26.219 DEBUG2 : 		Core 0: IceInit(...)
+jul 18/20:18:26.222 DEBUG2 : 		ISigEmu::IceVersion(209)
+jul 18/20:18:26.222 INFO   : Debug Log(info): Emulation layer version 5.21
+jul 18/20:18:26.222 DEBUG2 : 		ISigEmu::IceStatus(0)
+jul 18/20:18:26.222 DEBUG2 : 		<- DoIceInit()
+jul 18/20:18:26.222 DEBUG2 : 		-> CreateCmdInterpreter()
+jul 18/20:18:26.222 DEBUG2 : 		  ISigProbe::CreateInstance(..., 'SigCmdInterpreter', '')
+jul 18/20:18:26.222 DEBUG2 : 		<- CreateCmdInterpreter()
+jul 18/20:18:26.222 DEBUG2 : 		  ISigCmdInterpreter::LinkAttach('ISigEmu',...)
+jul 18/20:18:26.222 DEBUG2 : 		-> AcquireA2DInterface()
+jul 18/20:18:26.222 DEBUG2 : 		  ISigProbe::AcquireInterface('ISigA2D')
+jul 18/20:18:26.222 ERROR  :   ConnectToHardware(): Failed to create sigA2D object
+jul 18/20:18:26.224 INFO   : Debug Log(info): Notification to core-connect hookup.
+
+jul 18/20:18:26.224 INFO   : Notification to core-connect hookup.
+
+jul 18/20:18:26.224 DEBUG2 : 		>Calling _ExecDeviceCoreConnect
+jul 18/20:18:26.224 DEBUG2 : 		ISigCmdInterpreter::Execute('/noerror dap.RDPr 0')
+jul 18/20:18:26.226 INFO   : Debug Log(info): Connected DAP v2 on SWD. Detected DP ID=0x5ba02477.
+
+jul 18/20:18:26.226 INFO   : Connected DAP v2 on SWD. Detected DP ID=0x5ba02477.
+
+jul 18/20:18:26.231 DEBUG2 : 		ISigCmdInterpreter::Execute('dap.r 0xe0042008 0x00')
+jul 18/20:18:26.232 DEBUG2 : 		ISigCmdInterpreter::Execute('dap.w 0xe0042008 0x00001800 0x00')
+jul 18/20:18:26.233 DEBUG2 : 		ISigCmdInterpreter::Execute('dap.r 0xe0042004 0x00')
+jul 18/20:18:26.234 DEBUG2 : 		ISigCmdInterpreter::Execute('dap.w 0xe0042004 0x00000007 0x00')
+jul 18/20:18:26.235 INFO   : Debug Log(user): DMAC: DBGMCU_CR was modified. DBG_SLEEP, DBG_STOP and DBG_STANDBY bits are set.
+jul 18/20:18:26.235 INFO   : Debug Log(user): DMAC: HCLK and FCLK will not be disabled in SLEEP/STOP/STANDBY modes.
+jul 18/20:18:26.235 DEBUG2 : 		<Call to _ExecDeviceCoreConnect completed successfully
+jul 18/20:18:26.235 DEBUG2 : 		<Call to execUserCoreConnect: macro undefined
+jul 18/20:18:26.354 INFO   : Debug Log(info): Connecting to TAP#0 DAP AHB-AP port 0x0 (IDR=0x7477'0001).
+
+jul 18/20:18:26.354 INFO   : Connecting to TAP#0 DAP AHB-AP port 0x0 (IDR=0x7477'0001).
+
+jul 18/20:18:26.354 INFO   : Debug Log(info): Recognized CPUID=0x411fc271 Cortex-M7 r1p1 arch ARMv7-M
+
+jul 18/20:18:26.354 INFO   : Recognized CPUID=0x411fc271 Cortex-M7 r1p1 arch ARMv7-M
+
+jul 18/20:18:26.358 INFO   : Debug Log(info): Set cacheable access on AHB-AP port 0 (HPROT=0xeb000000).
+
+jul 18/20:18:26.358 INFO   : Set cacheable access on AHB-AP port 0 (HPROT=0xeb000000).
+
+jul 18/20:18:26.361 INFO   : Debug Log(info): Debug resources: 8 instruction comparators, 4 data watchpoints.
+
+jul 18/20:18:26.361 INFO   : Debug resources: 8 instruction comparators, 4 data watchpoints.
+
+jul 18/20:18:26.375 DEBUG2 : 		  ConnectToHardware(), checking status (#1): Core 0: CpuStatus(status = <0x3: CPU_STATUS_MPOWER | CPU_STATUS_MRUN>) = 0
+jul 18/20:18:26.376 INFO   : Debug Log(minor): CPU status OK
+jul 18/20:18:26.376 DEBUG2 : 		<- AcquireA2DInterface()
+jul 18/20:18:26.376 DEBUG2 : 		-> AcquireEmuVectInterface()
+jul 18/20:18:26.376 DEBUG2 : 		  ISigEmu::AcquireInterface('ISigEmuVect') (core 0)
+jul 18/20:18:26.376 DEBUG2 : 		<- AcquireEmuVectInterface()
+jul 18/20:18:26.376 DEBUG2 : 		-> AcquireEmuWptInterface()
+jul 18/20:18:26.376 DEBUG2 : 		  ISigEmu::AcquireInterface('ISigEmuWpt')
+jul 18/20:18:26.379 DEBUG2 : 		<- AcquireEmuWptInterface()
+jul 18/20:18:26.379 DEBUG2 : 		-> AcquirePcSamplerInterface()
+jul 18/20:18:26.379 DEBUG2 : 		  ISigEmu::AcquireInterface('ISigPcSampler')
+jul 18/20:18:26.380 DEBUG2 : 		<- AcquirePcSamplerInterface()
+jul 18/20:18:26.380 DEBUG2 : 		<- ConnectToHardware()
+jul 18/20:18:26.380 DEBUG2 : 		<Call to _ExecDevicePreReset: macro undefined
+jul 18/20:18:26.380 DEBUG2 : 		<Call to execUserPreReset: macro undefined
+jul 18/20:18:26.380 DEBUG2 : 		->   LowLevelReset(script, delay 200)
+jul 18/20:18:26.380 INFO   : Debug Log(info): LowLevelReset(script, delay 200)
+jul 18/20:18:26.380 INFO   : Debug Log(info): Calling reset script: ConnectUnderReset
+jul 18/20:18:26.380 DEBUG2 : 		>Calling ConnectUnderReset
+jul 18/20:18:26.380 DEBUG2 : 		ISigCmdInterpreter::Execute('emu jtagheader=reset:0')
+jul 18/20:18:26.381 DEBUG2 : 		ISigCmdInterpreter::Execute('j.pause 50')
+jul 18/20:18:26.443 DEBUG2 : 		ISigCmdInterpreter::Execute('j.i /force')
+jul 18/20:18:26.445 DEBUG2 : 		ISigCmdInterpreter::Execute('dap.w 0xE000EDF0 0xA05F0001 0')
+jul 18/20:18:26.446 DEBUG2 : 		ISigCmdInterpreter::Execute('dap.r 0xE000EDFC 0')
+jul 18/20:18:26.446 DEBUG2 : 		ISigCmdInterpreter::Execute('dap.w 0xE000EDFC 0x1000001 0x0')
+jul 18/20:18:26.447 DEBUG2 : 		ISigCmdInterpreter::Execute('emu jtagheader=reset:1')
+jul 18/20:18:26.447 DEBUG2 : 		ISigCmdInterpreter::Execute('emu jtagheader=reset:r')
+jul 18/20:18:26.447 DEBUG2 : 		ISigCmdInterpreter::Execute('j.pause 10')
+jul 18/20:18:26.459 DEBUG2 : 		ISigCmdInterpreter::Execute('refresh')
+jul 18/20:18:26.459 DEBUG2 : 		ISigCmdInterpreter::Execute('refresh')
+jul 18/20:18:26.460 DEBUG2 : 		<Call to ConnectUnderReset completed successfully
+jul 18/20:18:26.462 DEBUG2 : 		ISigPcSampler::GetSample(SIGAPIARM_SAMPLE_CYCLE) = 0x44e387
+jul 18/20:18:26.462 DEBUG2 : 		<-   LowLevelReset(script, delay 200)
+jul 18/20:18:26.462 DEBUG2 : 		->   StartSession(): WaitForCpuResetToComplete(core 0)
+jul 18/20:18:26.462 DEBUG2 : 		  StartSession(): Core 0: CpuStatus(status = <0x3: CPU_STATUS_MPOWER | CPU_STATUS_MRUN>) = 0
+jul 18/20:18:26.462 DEBUG2 : 		Core 0: WaitForCpuResetToComplete(): CpuStop()
+jul 18/20:18:26.463 DEBUG2 : 		-> WaitForCpuToStop(core 0)
+jul 18/20:18:26.482 DEBUG2 : 		  StartSession(): Core 0: CpuStatus(status = <0x1: CPU_STATUS_MPOWER>) = 0
+jul 18/20:18:26.482 DEBUG2 : 		<- WaitForCpuToStop(core 0)
+jul 18/20:18:26.482 DEBUG2 : 		<-   StartSession(): WaitForCpuResetToComplete(core 0)
+jul 18/20:18:26.483 DEBUG2 : 		StartSession() checking powerCore 0: CpuStatus(status = <0x1: CPU_STATUS_MPOWER>) = 0
+jul 18/20:18:26.483 DEBUG2 : 		Core 0: IceInfo(0, ...)
+jul 18/20:18:26.484 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000ed00, 4 bytes [by 4] = [ 71 c2 1f 41 ])
+jul 18/20:18:26.485 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fe000, 4 bytes [by 4] = [ 03 10 00 00 ])
+jul 18/20:18:26.485 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fe004, 4 bytes [by 4] = [ 03 30 f4 ff ])
+jul 18/20:18:26.486 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fe008, 4 bytes [by 4] = [ 02 50 f4 ff ])
+jul 18/20:18:26.488 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00ff000, 4 bytes [by 4] = [ 03 f0 f0 ff ])
+jul 18/20:18:26.488 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00ff004, 4 bytes [by 4] = [ 03 20 f0 ff ])
+jul 18/20:18:26.489 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00ff008, 4 bytes [by 4] = [ 03 30 f0 ff ])
+jul 18/20:18:26.490 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00ff00c, 4 bytes [by 4] = [ 03 10 f0 ff ])
+jul 18/20:18:26.491 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00ff010, 4 bytes [by 4] = [ 02 10 f4 ff ])
+jul 18/20:18:26.491 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00ff014, 4 bytes [by 4] = [ 02 20 f4 ff ])
+jul 18/20:18:26.492 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00ff018, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.493 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fefd0, 4 bytes [by 4] = [ 04 00 00 00 ])
+jul 18/20:18:26.494 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fefd4, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.494 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fefd8, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.495 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fefdc, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.496 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fefe0, 4 bytes [by 4] = [ c8 00 00 00 ])
+jul 18/20:18:26.496 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fefe4, 4 bytes [by 4] = [ b4 00 00 00 ])
+jul 18/20:18:26.497 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fefe8, 4 bytes [by 4] = [ 0b 00 00 00 ])
+jul 18/20:18:26.498 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fefec, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.499 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00feff0, 4 bytes [by 4] = [ 0d 00 00 00 ])
+jul 18/20:18:26.500 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00feff4, 4 bytes [by 4] = [ 10 00 00 00 ])
+jul 18/20:18:26.500 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00feff8, 4 bytes [by 4] = [ 05 00 00 00 ])
+jul 18/20:18:26.501 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00feffc, 4 bytes [by 4] = [ b1 00 00 00 ])
+jul 18/20:18:26.502 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fffd0, 4 bytes [by 4] = [ 04 00 00 00 ])
+jul 18/20:18:26.503 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fffd4, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.503 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fffd8, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.504 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fffdc, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.505 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fffe0, 4 bytes [by 4] = [ c7 00 00 00 ])
+jul 18/20:18:26.506 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fffe4, 4 bytes [by 4] = [ b4 00 00 00 ])
+jul 18/20:18:26.506 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fffe8, 4 bytes [by 4] = [ 0b 00 00 00 ])
+jul 18/20:18:26.507 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00fffec, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.508 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00ffff0, 4 bytes [by 4] = [ 0d 00 00 00 ])
+jul 18/20:18:26.508 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00ffff4, 4 bytes [by 4] = [ 10 00 00 00 ])
+jul 18/20:18:26.509 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00ffff8, 4 bytes [by 4] = [ 05 00 00 00 ])
+jul 18/20:18:26.510 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe00ffffc, 4 bytes [by 4] = [ b1 00 00 00 ])
+jul 18/20:18:26.511 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000efd0, 4 bytes [by 4] = [ 04 00 00 00 ])
+jul 18/20:18:26.511 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000efd4, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.512 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000efd8, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.513 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000efdc, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.514 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000efe0, 4 bytes [by 4] = [ 0c 00 00 00 ])
+jul 18/20:18:26.514 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000efe4, 4 bytes [by 4] = [ b0 00 00 00 ])
+jul 18/20:18:26.515 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000efe8, 4 bytes [by 4] = [ 0b 00 00 00 ])
+jul 18/20:18:26.515 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000efec, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.516 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000eff0, 4 bytes [by 4] = [ 0d 00 00 00 ])
+jul 18/20:18:26.516 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000eff4, 4 bytes [by 4] = [ e0 00 00 00 ])
+jul 18/20:18:26.518 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000eff8, 4 bytes [by 4] = [ 05 00 00 00 ])
+jul 18/20:18:26.519 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000effc, 4 bytes [by 4] = [ b1 00 00 00 ])
+jul 18/20:18:26.520 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0001fd0, 4 bytes [by 4] = [ 04 00 00 00 ])
+jul 18/20:18:26.520 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0001fd4, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.522 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0001fd8, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.522 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0001fdc, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.523 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0001fe0, 4 bytes [by 4] = [ 02 00 00 00 ])
+jul 18/20:18:26.524 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0001fe4, 4 bytes [by 4] = [ b0 00 00 00 ])
+jul 18/20:18:26.524 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0001fe8, 4 bytes [by 4] = [ 0b 00 00 00 ])
+jul 18/20:18:26.525 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0001fec, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.526 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0001ff0, 4 bytes [by 4] = [ 0d 00 00 00 ])
+jul 18/20:18:26.527 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0001ff4, 4 bytes [by 4] = [ e0 00 00 00 ])
+jul 18/20:18:26.527 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0001ff8, 4 bytes [by 4] = [ 05 00 00 00 ])
+jul 18/20:18:26.528 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0001ffc, 4 bytes [by 4] = [ b1 00 00 00 ])
+jul 18/20:18:26.529 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0002fd0, 4 bytes [by 4] = [ 04 00 00 00 ])
+jul 18/20:18:26.530 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0002fd4, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.530 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0002fd8, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.531 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0002fdc, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.532 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0002fe0, 4 bytes [by 4] = [ 0e 00 00 00 ])
+jul 18/20:18:26.533 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0002fe4, 4 bytes [by 4] = [ b0 00 00 00 ])
+jul 18/20:18:26.533 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0002fe8, 4 bytes [by 4] = [ 0b 00 00 00 ])
+jul 18/20:18:26.534 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0002fec, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.535 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0002ff0, 4 bytes [by 4] = [ 0d 00 00 00 ])
+jul 18/20:18:26.536 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0002ff4, 4 bytes [by 4] = [ e0 00 00 00 ])
+jul 18/20:18:26.536 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0002ff8, 4 bytes [by 4] = [ 05 00 00 00 ])
+jul 18/20:18:26.537 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0002ffc, 4 bytes [by 4] = [ b1 00 00 00 ])
+jul 18/20:18:26.538 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0000fd0, 4 bytes [by 4] = [ 04 00 00 00 ])
+jul 18/20:18:26.539 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0000fd4, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.540 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0000fd8, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.540 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0000fdc, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.541 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0000fe0, 4 bytes [by 4] = [ 01 00 00 00 ])
+jul 18/20:18:26.542 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0000fe4, 4 bytes [by 4] = [ b0 00 00 00 ])
+jul 18/20:18:26.543 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0000fe8, 4 bytes [by 4] = [ 0b 00 00 00 ])
+jul 18/20:18:26.543 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0000fec, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.544 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0000ff0, 4 bytes [by 4] = [ 0d 00 00 00 ])
+jul 18/20:18:26.545 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0000ff4, 4 bytes [by 4] = [ e0 00 00 00 ])
+jul 18/20:18:26.546 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0000ff8, 4 bytes [by 4] = [ 05 00 00 00 ])
+jul 18/20:18:26.546 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0000ffc, 4 bytes [by 4] = [ b1 00 00 00 ])
+jul 18/20:18:26.547 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0041fd0, 4 bytes [by 4] = [ 04 00 00 00 ])
+jul 18/20:18:26.547 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0041fd4, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.548 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0041fd8, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.549 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0041fdc, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.550 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0041fe0, 4 bytes [by 4] = [ 75 00 00 00 ])
+jul 18/20:18:26.550 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0041fe4, 4 bytes [by 4] = [ b9 00 00 00 ])
+jul 18/20:18:26.551 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0041fe8, 4 bytes [by 4] = [ 1b 00 00 00 ])
+jul 18/20:18:26.552 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0041fec, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.553 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0041ff0, 4 bytes [by 4] = [ 0d 00 00 00 ])
+jul 18/20:18:26.553 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0041ff4, 4 bytes [by 4] = [ 90 00 00 00 ])
+jul 18/20:18:26.554 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0041ff8, 4 bytes [by 4] = [ 05 00 00 00 ])
+jul 18/20:18:26.556 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe0041ffc, 4 bytes [by 4] = [ b1 00 00 00 ])
+jul 18/20:18:26.558 DEBUG2 : 		============== Starting flash pass 0
+jul 18/20:18:26.558 DEBUG2 : 		============== Downloading flashloader
+jul 18/20:18:26.558 DEBUG2 : 		<Call to _ExecDeviceFlashInit: macro undefined
+jul 18/20:18:26.558 DEBUG2 : 		>Calling execUserFlashInit
+jul 18/20:18:26.558 DEBUG2 : 		ISigCmdInterpreter::Execute('dap.r 0xe0042008 0x00')
+jul 18/20:18:26.560 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x40023c14, 4 bytes [by 4] = [ fd aa ff c0 ])
+jul 18/20:18:26.560 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0xe000ed94, 4 bytes [by 4] = [ 05 00 00 00 ])
+jul 18/20:18:26.560 DEBUG2 : 		  WritePostCache(): MemWrite(core 0, 0:0xe000ed94, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.561 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x4002380c, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.562 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x40023808, 4 bytes [by 4] = [ 0a 94 00 00 ])
+jul 18/20:18:26.563 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x40023800, 4 bytes [by 4] = [ 83 74 03 03 ])
+jul 18/20:18:26.563 DEBUG2 : 		  WritePostCache(): MemWrite(core 0, 0:0x4002380c, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.563 DEBUG2 : 		  WritePostCache(): MemWrite(core 0, 0:0x40023808, 4 bytes [by 4] = [ 00 00 00 00 ])
+jul 18/20:18:26.564 DEBUG2 : 		  WritePostCache(): MemWrite(core 0, 0:0x40023800, 4 bytes [by 4] = [ 83 7e 00 00 ])
+jul 18/20:18:26.566 DEBUG2 : 		  ReadPostCache(): MemRead(core 0, 0:0x40023c14, 4 bytes [by 4] = [ fd aa ff c0 ])
+jul 18/20:18:26.566 DEBUG2 : 		<Call to execUserFlashInit completed successfully
+jul 18/20:18:26.582 DEBUG2 : 		  WritePostCache(): MemWrite(core 0, 0:0x20010000, 2816 bytes [by 0] = [ 00 c0 03 20 b9 08 01 20 ... ])
+jul 18/20:18:26.591 ERROR  : MemWrite() returned Failure while executing the operation ;   WritePostCache(): 
+jul 18/20:18:26.591 DEBUG2 : 		============== Running flashloader
+jul 18/20:18:26.592 INFO   : Debug Log(error): Failed to load flash loader: C:\Program Files\IAR Systems\Embedded Workbench 9.40.1\arm/config/flashloader/ST/FlashSTM32F7xxx_RAM176K.out
+jul 18/20:18:26.592 INFO   : Debug Log(info): Unloaded macro file: C:\Program Files\IAR Systems\Embedded Workbench 9.40.1\arm/config/flashloader/ST/FlashSTM32F7xxx.mac
+jul 18/20:18:26.592 INFO   : Debug Log(error): Failed to load flash loader: C:\Program Files\IAR Systems\Embedded Workbench 9.40.1\arm/config/flashloader/ST/FlashSTM32F730x8.flash
+jul 18/20:18:28.245 INFO   : Debug Log(info): Unloaded macro file: C:\Program Files\IAR Systems\Embedded Workbench 9.40.1\arm/config/debugger/ST/STM32F723E-DISCO.dmac
+jul 18/20:18:28.245 INFO   : Debug Log(info): Unloaded macro file: C:\Program Files\IAR Systems\Embedded Workbench 9.40.1\arm/config/debugger/ST/STM32F7xx.dmac
+jul 18/20:18:28.245 INFO   : Debug Log(info): Unloaded macro file: C:\Program Files\IAR Systems\Embedded Workbench 9.40.1\arm/config/debugger/ST/STM32F7xx_OB.dmac
+jul 18/20:18:28.245 INFO   : Debug Log(info): Unloaded macro file: C:\Program Files\IAR Systems\Embedded Workbench 9.40.1\arm/config/debugger/ST/STM32F7xx_TRACE.dmac
+jul 18/20:18:29.536 DEBUG2 : 		-> AboutToStopSession()
+jul 18/20:18:29.536 DEBUG2 : 		<- AboutToStopSession()
+jul 18/20:18:29.554 DEBUG2 : 		-> PrepareStopSession()
+jul 18/20:18:29.554 DEBUG2 : 		<- PrepareStopSession()
+jul 18/20:18:29.589 DEBUG2 : 		StopGui()
+jul 18/20:18:29.603 DEBUG2 : 		-> StopSession()
+jul 18/20:18:29.616 DEBUG2 : 		-> TerminateHardware()
+jul 18/20:18:29.616 DEBUG2 : 		  ISigEmu::ReleaseInterface(pcSampler)
+jul 18/20:18:29.616 DEBUG2 : 		  ISigEmu::ReleaseInterface(sigWpt)
+jul 18/20:18:29.616 DEBUG2 : 		  ISigEmu::ReleaseInterface(sigVect)
+jul 18/20:18:29.616 DEBUG2 : 		  ISigEmu::IceTerm()
+jul 18/20:18:29.620 DEBUG2 : 		Core 0: sigEmu->LinkAttach(ISigProbe)
+jul 18/20:18:29.620 DEBUG2 : 		  ISigApi::ReleaseInstance(sigEmu)
+jul 18/20:18:29.620 DEBUG2 : 		  SigAPITerm()
+jul 18/20:18:29.620 DEBUG2 : 		<- TerminateHardware()
+jul 18/20:18:29.620 DEBUG2 : 		<- StopSession()
+jul 18/20:18:29.620 DEBUG2 : 		-> ~TdJetDriver()
+jul 18/20:18:29.620 DEBUG2 : 		-> TerminateHardware()
+jul 18/20:18:29.620 DEBUG2 : 		<- TerminateHardware()
