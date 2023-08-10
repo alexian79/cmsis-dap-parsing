@@ -58,8 +58,9 @@ def write_to_hid(dev, msg_str):
     print()
     
 if __name__ == '__main__':
-    fname = '25mhz_flash_loader_error.json'
-    fname = '25mhz_flash_loader_error_crafted.json'
+    #fname = '25mhz_flash_loader_error.json'
+    #fname = '25mhz_flash_loader_error_crafted.json'
+    fname = '25mhz_flash_loader_error_crafted_short.json'
     #fname = 'pyocd_25.json'
     with open(fname, 'rb') as f:
         js = json.load(f)

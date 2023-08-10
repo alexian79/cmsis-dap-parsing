@@ -4,6 +4,9 @@ import json
 if __name__ == '__main__':
     fname = '25mhz_flash_loader_error.json'
     fname = 'pyocd_25.json'
+    fname = 'initflash_error_25Mhz.json'
+    fname = 'flashloader_error_25Mhz.json'
+    fname = 'flashloader_error_25_2Mhz.json'
     with open(fname, 'rb') as f:
         js = json.load(f)
     with open(fname + '.csv', 'w') as of:

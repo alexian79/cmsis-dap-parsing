@@ -198,7 +198,11 @@ if __name__ == "__main__":
         #"25mhz_flash_loader_error.json.csv",
         #"pyocd_25.json.csv",
         #"25mhz_flash_loader_error.json.replay.csv",
-        "25mhz_flash_loader_error_crafted.json.replay.csv",
+        #"25mhz_flash_loader_error_crafted.json.replay.csv",
+        #"25mhz_flash_loader_error_crafted_short.json.replay.csv",
+        #"initflash_error_25Mhz.json.csv",
+        #"flashloader_error_25Mhz.json.csv",
+        'flashloader_error_25_2Mhz.json.csv',
     ]:
         with open(fname + '.txt', 'w') as ofile:
             dump = TBeagleDump(fname)
